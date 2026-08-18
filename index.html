@@ -3,49 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <title>Mi Portafolio - Álvaro</title>
     <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 
-<body>  
+<body> 
     <main>
+        <!-- Presentación unificada y limpia -->
         <section id="inicio" class="hero">
-            <h1>¡Hola! Soy Alvaro</h1>
-            <p>estudienate de Ing en informatica</p>
-            <p>5 años de experiencia. ingeniero en informatica con mencion en ciencia de datos de chile. Especializado en la construcción de canalizaciones de datos (Data Pipelines) </p>
-        </section>
-
-        <section id="proyectos">
-    <h2>Proyectos</h2>
-    <div class="projects-grid">
-        <!-- Toda la tarjeta es un enlace -->
-        <a href="https://github.com/tu-usuario/bosques-australes" target="_blank" rel="noopener noreferrer" class="card-wrapper">
-            <article class="card">
-                <h3>Bosques Australes</h3>
-                <p>Un sistema de organización para una empresa de madera en el sur de Chile.</p>
-            </article>
-        </a>
+    <div class="hero-container">
+        <!-- Foto de perfil -->
+        <img src="portaperfil.png" alt="Foto de Álvaro" class="hero-img">
+        
+        <!-- Texto de presentación -->
+        <div class="hero-text">
+            <h1>¡Hola! Soy Álvaro</h1>
+            <p>Estudiante de Ingeniería en Informática con mención en Ciencia de Datos. Especializado en la construcción de canalizaciones de datos (Data Pipelines) y desarrollo backend.</p>
+        </div>
     </div>
 </section>
 
-        <section id="skills">
-            <h2>Habilidades</h2>
-            <ul class="skills-list">
-                <p></p>
-            </ul>
+        <!-- Proyectos -->
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <div class="projects-grid">
+                <a href="https://github.com/ruke-duoc-uc/bosques-australes.git" target="_blank" rel="noopener noreferrer" class="card-wrapper">
+                    <article class="card">
+                        <h3>Bosques Australes</h3>
+                        <p>Un sistema de organización para una empresa de madera en el sur de Chile.</p>
+                    </article>
+                </a>
+            </div>
         </section>
 
+        <!-- Habilidades formateadas igual que proyectos (tarjetas .card) -->
+        <section id="skills">
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <article class="card">
+                    <h3>Desarrollo Backend</h3>
+                    <p>Java (17/21), Spring Boot 3, Spring Data JPA, Hibernate, Spring Security, APIs RESTful.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Arquitectura & Infraestructura</h3>
+                    <p>Arquitectura de Microservicios (Patrón CSR), Spring RestClient, API Gateway, Docker.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Bases de Datos & Migraciones</h3>
+                    <p>PostgreSQL, MySQL, estrategia Database per Service, Flyway (Control DDL).</p>
+                </article>
+
+                <article class="card">
+                    <h3>Testing & Calidad</h3>
+                    <p>JUnit 5, Mockito, JaCoCo (Cobertura de código superior al 80%).</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Experiencia Laboral -->
         <section id="exp-laboral">   
             <h2>Experiencia laboral</h2>
             <ul class="exp-list">    
-                <li>ayudante de instador de fibra optica</li>
+                <li>Ayudante de instalador de fibra óptica</li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Alvaro. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Álvaro. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

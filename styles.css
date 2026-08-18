@@ -1,8 +1,3 @@
-body{
-    font-family: 'Inter', 'segoe ui', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
-}
-
-
 /* ==========================================
    1. RESET BÁSICO Y VARIABLES DE COLOR
    ========================================== */
@@ -70,32 +65,55 @@ h2::after {
 }
 
 /* ==========================================
-   3. SECCIÓN HERO (PRESENTACIÓN)
+   3. SECCIÓN HERO (PRESENTACIÓN CON FOTO)
    ========================================== */
 .hero {
-    text-align: center;
-    padding: 4rem 1rem 2rem 1rem;
+    padding: 3rem 0;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 800;
+.hero-container {
+    display: flex;
+    align-items: center;  /* Alinea la foto y el texto al centro verticalmente */
+    justify-content: center;
+    gap: 2.5rem;          /* Espacio entre la foto y el texto */
+    text-align: left;     /* Mantiene el texto alineado a la izquierda */
+}
+
+.hero-img {
+    width: 160px;         /* Ancho de la imagen */
+    height: 160px;        /* Alto de la imagen */
+    border-radius: 50%;   /* Hace que la imagen sea circular */
+    object-fit: cover;    /* Evita que la foto se deforme */
+    border: 3px solid var(--color-primario); /* Borde morado */
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.3); /* Resplandor suave */
+    flex-shrink: 0;       /* Evita que la foto se reduzca si el texto es largo */
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, #ffffff 30%, var(--color-secundario));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
-.hero p {
-    font-size: 1.25rem;
+.hero-text p {
     color: var(--texto-secundario);
-    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Adaptación para pantallas pequeñas (Celulares) */
+@media (max-width: 650px) {
+    .hero-container {
+        flex-direction: column; /* Coloca la foto arriba del texto en móviles */
+        text-align: center;
+        gap: 1.5rem;
+    }
 }
 
 /* ==========================================
-   4. TARJETAS DE PROYECTOS (GRID)
+   4. TARJETAS DE PROYECTOS Y SKILLS (GRID)
    ========================================== */
-.projects-grid {
+.projects-grid,
+.skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
@@ -127,33 +145,7 @@ h2::after {
 }
 
 /* ==========================================
-   5. SECCIÓN DE HABILIDADES (SKILLS)
-   ========================================== */
-.skills-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-}
-
-.skills-list li {
-    background-color: var(--bg-tarjeta);
-    border: 1px solid var(--borde-tarjeta);
-    color: var(--color-secundario);
-    padding: 0.5rem 1.25rem;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-.skills-list li:hover {
-    border-color: var(--color-secundario);
-    background-color: rgba(56, 189, 248, 0.1);
-}
-
-/* ==========================================
-   6. EXPERIENCIA LABORAL
+   5. EXPERIENCIA LABORAL
    ========================================== */
 .exp-list {
     list-style: none;
@@ -178,7 +170,7 @@ h2::after {
 }
 
 /* ==========================================
-   7. PIE DE PÁGINA (FOOTER)
+   6. PIE DE PÁGINA (FOOTER)
    ========================================== */
 footer {
     text-align: center;
@@ -187,4 +179,10 @@ footer {
     color: var(--texto-secundario);
     font-size: 0.875rem;
     margin-top: 2rem;
+}
+
+.card-wrapper {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
