@@ -1,0 +1,190 @@
+body{
+    font-family: 'Inter', 'segoe ui', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+
+
+/* ==========================================
+   1. RESET BÁSICO Y VARIABLES DE COLOR
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-principal: #0d1117;       /* Azul oscuro / casi negro de fondo */
+    --bg-tarjeta: #161b22;         /* Fondo ligeramente más claro para bloques */
+    --bg-tarjeta-hover: #1f242d;   /* Fondo cuando pasas el cursor */
+    --color-primario: #7c3aed;     /* Morado elegante (acento principal) */
+    --color-secundario: #38bdf8;   /* Azul cyan brillante para detalles */
+    --texto-principal: #f3f4f6;    /* Blanco suave para lectura cómoda */
+    --texto-secundario: #9ca3af;   /* Gris claro para descripciones */
+    --borde-tarjeta: #30363d;      /* Línea fina para dar definición */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    line-height: 1.6;
+    padding-bottom: 2rem;
+}
+
+/* ==========================================
+   2. ESTRUCTURA Y CONTENEDORES
+   ========================================== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+/* Títulos de cada sección */
+h2 {
+    font-size: 1.8rem;
+    color: var(--texto-principal);
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Línea decorativa morada debajo de los títulos h2 */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
+    border-radius: 2px;
+}
+
+/* ==========================================
+   3. SECCIÓN HERO (PRESENTACIÓN)
+   ========================================== */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem 2rem 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #ffffff 30%, var(--color-secundario));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--texto-secundario);
+    font-weight: 500;
+}
+
+/* ==========================================
+   4. TARJETAS DE PROYECTOS (GRID)
+   ========================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--bg-tarjeta);
+    border: 1px solid var(--borde-tarjeta);
+    padding: 1.75rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-primario);
+    box-shadow: 0 10px 20px rgba(124, 58, 237, 0.15);
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    color: var(--texto-principal);
+    margin-bottom: 0.75rem;
+}
+
+.card p {
+    color: var(--texto-secundario);
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   5. SECCIÓN DE HABILIDADES (SKILLS)
+   ========================================== */
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skills-list li {
+    background-color: var(--bg-tarjeta);
+    border: 1px solid var(--borde-tarjeta);
+    color: var(--color-secundario);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.skills-list li:hover {
+    border-color: var(--color-secundario);
+    background-color: rgba(56, 189, 248, 0.1);
+}
+
+/* ==========================================
+   6. EXPERIENCIA LABORAL
+   ========================================== */
+.exp-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.exp-list li {
+    background-color: var(--bg-tarjeta);
+    border: 1px solid var(--borde-tarjeta);
+    border-left: 4px solid var(--color-primario);
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    color: var(--texto-principal);
+    font-size: 1rem;
+    transition: transform 0.2s;
+}
+
+.exp-list li:hover {
+    transform: translateX(5px);
+}
+
+/* ==========================================
+   7. PIE DE PÁGINA (FOOTER)
+   ========================================== */
+footer {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    border-top: 1px solid var(--borde-tarjeta);
+    color: var(--texto-secundario);
+    font-size: 0.875rem;
+    margin-top: 2rem;
+}
