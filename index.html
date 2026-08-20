@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio - Álvaro</title>
     <link href="styles.css" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <script src="app.js" defer></script>
 </head>
 
 <body> 
@@ -26,16 +26,55 @@
 
         <!-- Proyectos -->
         <section id="proyectos">
-            <h2>Proyectos</h2>
-            <div class="projects-grid">
-                <a href="https://github.com/ruke-duoc-uc/bosques-australes.git" target="_blank" rel="noopener noreferrer" class="card-wrapper">
-                    <article class="card">
-                        <h3>Bosques Australes</h3>
-                        <p>Un sistema de organización para una empresa de madera en el sur de Chile.</p>
-                    </article>
-                </a>
+    <h2>Proyectos</h2>
+    <div class="projects-grid">
+        <article class="card">
+            <h3>Bosques Australes</h3>
+            <p class="project-desc">
+                Sistema distribuido de gestión para el sector forestal. Administra la trazabilidad completa de la madera: planificación de cosechas, acopio en terreno, facturación y logística de exportación.
+            </p>
+            
+            <!-- Contenedor de tecnologías agrupadas -->
+            <div class="project-tech">
+                <div class="tech-group">
+                    <strong>Arquitectura & Backend</strong>
+                    <div class="tags">
+                        <span>Java 21</span>
+                        <span>Spring Boot 3</span>
+                        <span>Microservicios (CSR)</span>
+                        <span>API Gateway</span>
+                        <span>Docker</span>
+                    </div>
+                </div>
+
+                <div class="tech-group">
+                    <strong>Persistencia & Datos</strong>
+                    <div class="tags">
+                        <span>PostgreSQL</span>
+                        <span>MySQL</span>
+                        <span>Spring Data JPA</span>
+                        <span>Flyway</span>
+                    </div>
+                </div>
+
+                <div class="tech-group">
+                    <strong>Calidad & Seguridad</strong>
+                    <div class="tags">
+                        <span>JUnit 5</span>
+                        <span>Mockito</span>
+                        <span>JaCoCo (>80%)</span>
+                        <span>Spring Security</span>
+                    </div>
+                </div>
             </div>
-        </section>
+
+            <!-- Botón directo a GitHub -->
+            <a href="https://github.com/ruke-duoc-uc/bosques-australes.git" target="_blank" rel="noopener noreferrer" class="card-link">
+                Ver Repositorio en GitHub &rarr;
+            </a>
+        </article>
+    </div>
+</section>
 
         <!-- Habilidades formateadas igual que proyectos (tarjetas .card) -->
         <section id="skills">
@@ -67,7 +106,8 @@
         <section id="exp-laboral">   
             <h2>Experiencia laboral</h2>
             <ul class="exp-list">    
-                <li>Ayudante de instalador de fibra óptica</li>
+                <li>bosques australes</li>
+                <p>sistema de gestión de empresa desarrollado en el año 2026</p>
             </ul>
         </section>
     </main>

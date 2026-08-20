@@ -145,7 +145,66 @@ h2::after {
 }
 
 /* ==========================================
-   5. EXPERIENCIA LABORAL
+   5. DETALLES TÉCNICOS EN PROYECTOS
+   ========================================== */
+.project-desc {
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+    color: var(--texto-secundario);
+}
+
+.project-tech {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--bg-principal);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--borde-tarjeta);
+}
+
+.tech-group strong {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--color-secundario);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.tags span {
+    background-color: var(--bg-tarjeta);
+    border: 1px solid var(--borde-tarjeta);
+    color: var(--texto-principal);
+    font-size: 0.78rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.card-link {
+    display: inline-block;
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.card-link:hover {
+    color: var(--color-primario);
+    transform: translateX(3px);
+}
+
+/* ==========================================
+   6. EXPERIENCIA LABORAL
    ========================================== */
 .exp-list {
     list-style: none;
@@ -170,7 +229,7 @@ h2::after {
 }
 
 /* ==========================================
-   6. PIE DE PÁGINA (FOOTER)
+   7. PIE DE PÁGINA (FOOTER)
    ========================================== */
 footer {
     text-align: center;
@@ -179,10 +238,4 @@ footer {
     color: var(--texto-secundario);
     font-size: 0.875rem;
     margin-top: 2rem;
-}
-
-.card-wrapper {
-    text-decoration: none;
-    color: inherit;
-    display: block;
 }
